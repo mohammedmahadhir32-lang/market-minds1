@@ -1,0 +1,59 @@
+/* Chart Placeholder Section Styles */
+.chart-placeholder {
+  background-color: white;
+  padding: 4rem 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.chart-placeholder-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.chart-box {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  border: 2px dashed #cbd5e0;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chart-box:hover {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e0e4e8 100%);
+}
+
+.chart-icon {
+  color: #667eea;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.chart-placeholder-text {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chart-placeholder {
+    padding: 3rem 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+  
+  .chart-box {
+    min-height: 250px;
+    padding: 3rem 1.5rem;
+  }
+}
+

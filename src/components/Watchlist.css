@@ -1,0 +1,153 @@
+/* Watchlist Component */
+.watchlist {
+  background: #1e222d;
+  border-right: 1px solid #363a45;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.watchlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #363a45;
+  background: #131722;
+}
+
+.watchlist-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d1d4dc;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.watchlist-add-btn {
+  background: transparent;
+  border: 1px solid #363a45;
+  color: #868993;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.watchlist-add-btn:hover {
+  background: #2a2e39;
+  border-color: #2962ff;
+  color: #2962ff;
+}
+
+.watchlist-search {
+  padding: 12px 16px;
+  border-bottom: 1px solid #363a45;
+}
+
+.watchlist-search-input {
+  width: 100%;
+  background: #131722;
+  border: 1px solid #363a45;
+  color: #d1d4dc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.watchlist-search-input:focus {
+  border-color: #2962ff;
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.2);
+}
+
+.watchlist-search-input::placeholder {
+  color: #868993;
+}
+
+.watchlist-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.watchlist-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  padding: 8px 16px;
+  background: #131722;
+  border-bottom: 1px solid #363a45;
+  font-size: 11px;
+  font-weight: 600;
+  color: #868993;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.watchlist-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  padding: 10px 16px;
+  border-bottom: 1px solid #2a2e39;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.watchlist-row:hover {
+  background: #2a2e39;
+}
+
+.watchlist-row:active {
+  background: #363a45;
+}
+
+.col-symbol {
+  font-weight: 600;
+  color: #d1d4dc;
+}
+
+.symbol-name {
+  font-size: 14px;
+}
+
+.col-price {
+  text-align: right;
+  color: #d1d4dc;
+  font-weight: 500;
+}
+
+.col-change {
+  text-align: right;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.col-change.positive {
+  color: #26a69a;
+}
+
+.col-change.negative {
+  color: #ef5350;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .watchlist {
+    display: none;
+  }
+}
+
