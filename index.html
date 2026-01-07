@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="MarketMinds - AI-powered stock recommendations for smarter investing"
+    />
+    <title>MarketMinds - Smart Stock Advisor</title>
+  </head>
+  <body>
+    
+
+<script>
+async function loginUser() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const res = await fetch("http://127.0.0.1:5000/login", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({email, password})
+    });
+
+    const data = await res.json();
+
+    if (res.status === 200) {
+        alert(data.message);
+        window.location.href = "dashboard.html"; // Redirect after login
+    } else {
+        alert(data.message);
+    }
+}
+</script>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+
